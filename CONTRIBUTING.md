@@ -3,12 +3,17 @@
 Thanks for considering a contribution. This document covers how to get set up, what we are
 looking for, and the standards a change needs to meet.
 
+DecodeBox is live at [decodebox.m4sh.ir](https://decodebox.m4sh.ir/). You do not need to build
+anything to help: pasting real payloads at the live site and reporting what it gets wrong is one
+of the most useful contributions there is.
+
 By participating you agree to the
-[OWASP Code of Conduct](https://owasp.org/www-policy/operational/code-of-conduct).
+[OWASP Code of Conduct](https://policy.owasp.org/operational/code-of-conduct).
 
 ## Getting set up
 
-Requires Node.js 20 or later, the floor CI builds against. `.nvmrc` pins 22 for development.
+Requires Node.js 22.12 or later, the floor CI builds against. CI runs on 22 and 24, and `.nvmrc`
+pins 22 for development.
 
 ```bash
 npm install
@@ -87,6 +92,21 @@ Text becomes bytes exactly once, in the input pane. Bytes become text exactly on
 - Comment the reasoning, not the mechanics. If the code needs a comment to explain *what* it
   does, rewrite the code instead.
 
+## Contribution workflow
+
+Code and documentation both follow the standard GitHub flow:
+
+1. **Check for an existing issue.** Make sure the bug or idea has not already been reported. For
+   a large change — a new detection strategy, an architectural refactor — open an issue first
+   and agree the approach before writing code.
+2. **Fork the repository** and clone your fork.
+3. **Create a branch** with a name that says what it is for, such as `feat/base91-operation`,
+   `fix/hex-false-positive` or `docs/improve-readme`.
+4. **Make the change**, keeping each commit logical and focused.
+5. **Write clear commit messages** that say *what* changed and *why* it was necessary.
+6. **Open a pull request** against `main`. Explain the reasoning, and link any issue it resolves
+   (for example, "Resolves #12").
+
 ## Pull requests
 
 - One logical change per pull request. A PR that adds an operation and refactors the store is
@@ -117,9 +137,10 @@ deliberate. It used to warn instead, and a warning inside a green run is indisti
 nothing at all: the site was blank for an afternoon while every check passed.
 
 `public/CNAME` claims `decodebox.owasp.org`. On a branch-served site the CNAME file *is* the
-custom domain setting, so the workflow deletes it anywhere except `OWASP/DecodeBox`. A fork
-serves from its own `github.io` URL instead, which works because every asset path in the build
-is relative.
+custom domain setting, so anywhere except `OWASP/DecodeBox` the workflow replaces it with the
+repository's own configured domain — which is how the current deployment keeps serving
+[decodebox.m4sh.ir](https://decodebox.m4sh.ir/). A fork with no custom domain serves from its own
+`github.io` URL instead, which works because every asset path in the build is relative.
 
 ## Reporting bugs
 

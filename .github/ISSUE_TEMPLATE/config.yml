@@ -10,5 +10,5 @@ contact_links:
     about: Ask how something works, or propose an idea before writing code.
 
   - name: OWASP Code of Conduct
-    url: https://owasp.org/www-policy/operational/code-of-conduct
+    url: https://policy.owasp.org/operational/code-of-conduct
     about: How we expect everyone to behave in this project.
