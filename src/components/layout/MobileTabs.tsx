@@ -45,7 +45,7 @@ export function MobileTabs() {
               {count > 0 && (
                 <span
                   aria-hidden="true"
-                  className="absolute -end-1.5 -top-1 grid h-3 min-w-3 place-items-center rounded-full px-0.5 font-mono text-[9px] text-bg"
+                  className="absolute -inset-e-1.5 -top-1 grid h-3 min-w-3 place-items-center rounded-full px-0.5 font-mono text-[9px] text-bg"
                   style={{ backgroundColor: 'var(--accent)' }}
                 >
                   {count}

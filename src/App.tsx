@@ -32,7 +32,7 @@ export default function App() {
     <div className="flex h-dvh flex-col overflow-hidden">
       <a
         href="#decodebox-input"
-        className="sr-only rounded-control border border-accent-line bg-surface px-3 py-2 text-xs2 font-medium text-text focus:not-sr-only focus:absolute focus:start-2 focus:top-2 focus:z-50"
+        className="sr-only rounded-control border border-accent-line bg-surface px-3 py-2 text-xs2 font-medium text-text focus:not-sr-only focus:absolute focus:inset-s-2 focus:top-2 focus:z-50"
       >
         {t.layout.skipToInput}
       </a>

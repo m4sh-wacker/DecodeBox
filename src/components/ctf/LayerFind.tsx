@@ -43,7 +43,7 @@ function Hit({ match }: { match: LayerMatch }) {
       <p className="overflow-x-auto whitespace-pre px-2.5 py-2 font-mono text-micro text-muted">
         {match.before && <span className="text-faint">…{match.before}</span>}
         <mark
-          className="rounded-[2px] px-0.5 font-semibold"
+          className="rounded-chip px-0.5 font-semibold"
           style={{ backgroundColor: 'var(--accent-soft)', color: 'var(--accent-text)' }}
         >
           {match.match}
@@ -91,7 +91,7 @@ export function LayerFind() {
           <Search
             size={13}
             aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 start-2.5 my-auto text-faint"
+            className="pointer-events-none absolute inset-y-0 inset-s-2.5 my-auto text-faint"
           />
           <input
             type="search"
@@ -103,7 +103,7 @@ export function LayerFind() {
             spellCheck={false}
             className={cx(
               'w-full rounded-control border bg-surface-2 py-2 pe-8 ps-8 font-mono text-xs2',
-              'outline-none transition-colors duration-150 ease-smooth placeholder:font-sans placeholder:text-faint',
+              'outline-hidden transition-colors duration-150 ease-smooth placeholder:font-sans placeholder:text-faint',
               valid ? 'border-line focus:border-accent-line' : 'border-danger',
             )}
           />
@@ -113,7 +113,7 @@ export function LayerFind() {
               onClick={() => setQuery('')}
               aria-label={t.find.clear}
               title={t.find.clear}
-              className="absolute inset-y-0 end-1.5 my-auto grid h-6 w-6 place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-text"
+              className="absolute inset-y-0 inset-e-1.5 my-auto grid h-6 w-6 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text"
             >
               <X size={12} aria-hidden="true" />
             </button>

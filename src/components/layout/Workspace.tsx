@@ -127,7 +127,7 @@ export function Workspace() {
                   aria-label={maximised ? t.layout.restore : t.layout.maximiseOutput}
                   title={maximised ? t.layout.restore : t.layout.maximiseOutput}
                   aria-pressed={maximised}
-                  className="grid h-6 w-6 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text"
+                  className="grid h-6 w-6 place-items-center rounded-xs text-faint transition-colors hover:bg-surface-3 hover:text-text"
                 >
                   {maximised ? (
                     <Minimize2 size={13} aria-hidden="true" />

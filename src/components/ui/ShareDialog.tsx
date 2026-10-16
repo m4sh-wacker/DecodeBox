@@ -50,7 +50,7 @@ export function ShareDialog() {
           checked={includeInput}
           onChange={(e) => setIncludeInput(e.target.checked)}
           disabled={input.length === 0}
-          className="mt-0.5 h-3.5 w-3.5 accent-[var(--accent)]"
+          className="mt-0.5 h-3.5 w-3.5 accent-(--accent)"
         />
         <span>
           <span className="text-xs2">{t.share.includeInput}</span>
@@ -78,7 +78,7 @@ export function ShareDialog() {
           value={url}
           rows={3}
           onFocus={(e) => e.currentTarget.select()}
-          className="w-full resize-none rounded-control border border-line bg-surface-2 p-2.5 font-mono text-micro leading-relaxed outline-none focus:border-accent-line"
+          className="w-full resize-none rounded-control border border-line bg-surface-2 p-2.5 font-mono text-micro leading-relaxed outline-hidden focus:border-accent-line"
         />
         <div className="mt-2 flex items-center justify-between gap-3">
           <span

@@ -116,7 +116,7 @@ function HintRow({ hint }: { hint: Hint }) {
             variant="primary"
             onClick={() => applyHint(hint)}
             title={t.ctf.applyHint}
-            className="shrink-0 !py-1 !text-micro"
+            className="shrink-0 py-1! text-micro!"
           >
             <Play size={11} aria-hidden="true" />
             {t.ctf.apply}

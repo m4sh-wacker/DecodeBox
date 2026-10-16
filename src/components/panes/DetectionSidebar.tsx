@@ -194,7 +194,7 @@ function Detail({ node }: { node: AnalysisNode }) {
         )}
       </div>
 
-      <p className="mt-1 break-words font-mono text-[10px] text-faint">{node.path}</p>
+      <p className="mt-1 wrap-break-word font-mono text-[10px] text-faint">{node.path}</p>
 
       <pre className="mt-1.5 max-h-40 overflow-auto whitespace-pre-wrap break-all rounded-control bg-surface px-2 py-1.5 font-mono text-[11px] text-text">
         {text.slice(0, PREVIEW_LIMIT)}
@@ -237,7 +237,7 @@ function FindingRow({ finding }: { finding: Finding }) {
           style={{ color: SEVERITY_COLOUR[finding.severity] }}
         />
         <span className="min-w-0 flex-1">
-          <span className="block break-words text-muted">{finding.title}</span>
+          <span className="block wrap-break-word text-muted">{finding.title}</span>
           <span
             className="font-mono text-[10px] uppercase tracking-wider"
             style={{ color: SEVERITY_COLOUR[finding.severity] }}
@@ -254,17 +254,17 @@ function FindingRow({ finding }: { finding: Finding }) {
 
       {open && (
         <div className="px-2 pb-2 ps-[26px]">
-          <p className="break-words text-[11px] leading-relaxed text-muted">{finding.detail}</p>
+          <p className="wrap-break-word text-[11px] leading-relaxed text-muted">{finding.detail}</p>
           {finding.evidence.length > 0 && (
             <pre className="mt-1 max-h-24 overflow-auto whitespace-pre-wrap break-all rounded-control bg-surface px-2 py-1 font-mono text-[10px] text-text">
               {finding.evidence}
             </pre>
           )}
-          <p className="mt-1 break-words font-mono text-[10px] text-faint">
+          <p className="mt-1 wrap-break-word font-mono text-[10px] text-faint">
             {t.detectionTree.where}: {finding.path}
           </p>
           {finding.reference !== undefined && (
-            <p className="mt-0.5 break-words font-mono text-[10px] text-faint">{finding.reference}</p>
+            <p className="mt-0.5 wrap-break-word font-mono text-[10px] text-faint">{finding.reference}</p>
           )}
         </div>
       )}
@@ -279,7 +279,7 @@ function IndicatorRow({ indicator }: { indicator: Indicator }) {
       <div className="min-w-0 flex-1">
         <span className="me-1.5 font-mono text-[10px] uppercase text-faint">{indicator.kind}</span>
         <span className="break-all font-mono text-muted">{indicator.defanged}</span>
-        <p className="break-words font-mono text-[10px] text-faint">{indicator.path}</p>
+        <p className="wrap-break-word font-mono text-[10px] text-faint">{indicator.path}</p>
       </div>
     </div>
   );

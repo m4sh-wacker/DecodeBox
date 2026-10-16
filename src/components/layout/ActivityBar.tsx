@@ -36,12 +36,12 @@ function RailButton({
       aria-current={active ? 'true' : undefined}
       title={label}
       data-active={active}
-      className="db-rail-item relative grid h-12 w-12 shrink-0 place-items-center outline-none transition-colors duration-100"
+      className="db-rail-item relative grid h-12 w-12 shrink-0 place-items-center outline-hidden transition-colors duration-100"
     >
       {active && (
         <span
           aria-hidden="true"
-          className="absolute inset-y-1 start-0 w-[2px] rounded-e-sm"
+          className="absolute inset-y-1 inset-s-0 w-[2px] rounded-e-sm"
           style={{ backgroundColor: 'var(--accent)' }}
         />
       )}

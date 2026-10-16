@@ -53,7 +53,7 @@ export function RecipeLibrary() {
           placeholder={t.library.namePlaceholder}
           aria-label={t.library.namePlaceholder}
           maxLength={80}
-          className="min-w-0 flex-1 rounded-control border border-line bg-surface-2 px-2.5 py-1.5 text-xs2 outline-none transition-colors duration-150 focus:border-accent-line"
+          className="min-w-0 flex-1 rounded-control border border-line bg-surface-2 px-2.5 py-1.5 text-xs2 outline-hidden transition-colors duration-150 focus:border-accent-line"
         />
         <Button
           type="submit"

@@ -55,7 +55,7 @@ export function EditorTabs({
             {on && (
               <span
                 aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-[1px]"
+                className="absolute inset-x-0 top-0 h-px"
                 style={{ backgroundColor: 'var(--tab-active-line)' }}
               />
             )}
@@ -88,7 +88,7 @@ export function EditorTabs({
                 onClick={tab.onClose}
                 aria-label={`Close ${tab.name}`}
                 title={`Close ${tab.name}`}
-                className="grid h-4 w-4 place-items-center rounded-sm opacity-0 transition-opacity hover:bg-surface-3 focus-visible:opacity-100 group-hover:opacity-100"
+                className="grid h-4 w-4 place-items-center rounded-xs opacity-0 transition-opacity hover:bg-surface-3 focus-visible:opacity-100 group-hover:opacity-100"
               >
                 <X size={13} aria-hidden="true" />
               </button>

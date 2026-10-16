@@ -204,7 +204,7 @@ export function OutputPane() {
               aria-selected={view === mode}
               onClick={() => setView(mode)}
               className={cx(
-                'rounded px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider transition-colors',
+                'rounded-sm px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider transition-colors',
                 view === mode
                   ? 'bg-accent-soft text-text'
                   : 'text-faint hover:bg-surface-3 hover:text-muted',
