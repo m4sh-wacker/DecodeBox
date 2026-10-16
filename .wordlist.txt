@@ -198,6 +198,7 @@ IPv
 IPv4
 IPv6
 Ipsum
+ir
 JA
 Jekyll
 JetBrains
@@ -245,6 +246,7 @@ lzma
 LZMA
 LZNT
 LZString
+m4sh
 Mach
 markdownlint
 Matroska

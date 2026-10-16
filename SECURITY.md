@@ -1,5 +1,15 @@
 # Security Policy
 
+## Supported versions
+
+During pre-1.0 development, only the default branch receives security fixes. The live site at
+[decodebox.m4sh.ir](https://decodebox.m4sh.ir/) is built from it.
+
+| Version | Supported |
+| --- | --- |
+| `main` and the live site | ✅ |
+| Anything older, including a downloaded `decodebox.html` | ❌ |
+
 ## Reporting a vulnerability
 
 **Please do not report security vulnerabilities through public GitHub issues.**
@@ -68,6 +78,17 @@ DecodeBox is designed to process hostile, malformed, and deliberately adversaria
 are expected to fail loudly on bad input, never to crash the application, hang the tab, or execute
 anything. A crash on malformed input is a bug; an execution on malformed input is a vulnerability.
 
-## Supported versions
+## Security practices for contributors
 
-During pre-1.0 development, only the latest release on the default branch receives security fixes.
+- Never include secrets, tokens or credentials in a pull request, a test fixture or an issue.
+  Test data that looks like a credential must be a published example value, such as
+  `AKIAIOSFODNN7EXAMPLE`.
+- Treat every input as hostile, including recipe JSON, imported files and the URL hash.
+- Keep workflow permissions read-only unless a step genuinely needs to write, and pin actions to
+  a commit SHA.
+- Follow the [OWASP Top 10](https://owasp.org/www-project-top-ten/) when reviewing your own change.
+
+## Recognition
+
+Researchers who report responsibly are credited in the release notes and the fixing pull
+request, unless they ask to stay anonymous.

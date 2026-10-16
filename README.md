@@ -1,8 +1,9 @@
 # OWASP DecodeBox
 
-[![OWASP Incubator](https://img.shields.io/badge/OWASP-Incubator-blue)](https://owasp.org/projects)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](LICENSE)
-[![Client-side](https://img.shields.io/badge/processing-100%25_local-green)](#security--privacy)
+[![OWASP Project: Incubator](https://img.shields.io/badge/OWASP_Project-Incubator-blue.svg)](https://owasp.org/projects/)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Live Site](https://img.shields.io/badge/demo-decodebox.m4sh.ir-orange.svg)](https://decodebox.m4sh.ir/)
+[![Client-side](https://img.shields.io/badge/processing-100%25_local-green.svg)](#security--privacy)
 
 A browser-based workbench that unwraps unknown data, names what it finds, and explains how it knew.
 
@@ -15,9 +16,10 @@ payloads, and the analysis report is complete.
 
 - **Engine:** 504 operations across data formats, ciphers, public-key cryptography, hashing,
   compression, networking, forensics, multimedia and extractors. Every one is covered by a
-  round-trip or a published known-answer test — 766 tests in all.
+  round-trip or a published known-answer test — 1,109 tests in all.
 - **Interface:** Three modes — a workspace for transforming, a report for understanding, and a
-  CTF mode for working out what to try next.
+  CTF mode for working out what to try next, deployed at
+  **[decodebox.m4sh.ir](https://decodebox.m4sh.ir/)**.
 
 Still ahead: the accessibility audit and the internationalisation pass. A disassembler and an OCR
 engine are deliberately out of scope — they are their own projects, not operations.
@@ -133,12 +135,12 @@ without the engine changing by a line. Adding an operation should never require 
 
 ### Quick Start
 
-Requires Node.js 20 or later. CI builds on 20 and 22; `.nvmrc` pins 22 for development.
+Requires Node.js 22.12 or later. CI builds on 22 and 24; `.nvmrc` pins 22 for development.
 
 ```bash
 npm install
 npm run dev     # development server
-npm run test    # 766 tests
+npm run test    # 1,109 tests
 npm run build   # static site in dist/
 ```
 
@@ -168,15 +170,16 @@ standalone build stays on the main thread for very large inputs and is identical
 
 ### How to Contribute
 
-Contributions are welcome, particularly in these areas:
+The site is live, so the most valuable thing you can do right now is **use it and try to break
+it**. Contributions are welcome, particularly in these areas:
 
+- **Testing:** Paste real payloads at [decodebox.m4sh.ir](https://decodebox.m4sh.ir/) and report
+  anything it gets wrong — especially anything it gets wrong *confidently*.
 - **Operations:** New transformations. One self-contained module, one test file, no UI changes.
   [CONTRIBUTING.md](CONTRIBUTING.md) has the shape of one, and the byte rule that is easy to get
   wrong.
 - **Detection:** Better heuristics — but read the section on false positives first. A confident
   wrong answer is worse than no answer.
-- **Testing:** Paste real payloads at it and report anything it gets wrong — especially anything
-  it gets wrong *confidently*.
 - **Accessibility:** The WCAG 2.1 AA audit has not been done yet.
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md). All participants are expected to follow the

@@ -45,3 +45,11 @@ body:
           required: true
         - label: I searched existing issues and this is not a duplicate.
           required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to work on this issue. Please assign it to me.
+          required: false
