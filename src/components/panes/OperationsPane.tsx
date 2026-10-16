@@ -60,7 +60,7 @@ function Row({ op, query }: { op: OperationDef; query: string }) {
       >
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 start-[11px] w-px"
+          className="pointer-events-none absolute inset-y-0 inset-s-[11px] w-px"
           style={{ backgroundColor: 'var(--indent-guide)' }}
         />
 
@@ -96,8 +96,8 @@ function Row({ op, query }: { op: OperationDef; query: string }) {
           aria-pressed={starred}
           onClick={() => toggleFavourite(op.id)}
           className={cx(
-            'shrink-0 rounded-sm p-0.5 transition-opacity',
-            starred ? 'opacity-100' : 'opacity-0 group-hover:opacity-70 hover:!opacity-100',
+            'shrink-0 rounded-xs p-0.5 transition-opacity',
+            starred ? 'opacity-100' : 'opacity-0 group-hover:opacity-70 hover:opacity-100!',
           )}
         >
           <Star
@@ -212,7 +212,7 @@ export function OperationsPane() {
           <Search
             size={12}
             aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 start-2 my-auto text-faint"
+            className="pointer-events-none absolute inset-y-0 inset-s-2 my-auto text-faint"
           />
           <input
             type="search"
@@ -228,7 +228,7 @@ export function OperationsPane() {
             aria-label={t.operations.search}
             aria-describedby="operation-search-hint"
             spellCheck={false}
-            className="w-full rounded-sm border border-line bg-surface-2 py-1 pe-14 ps-6 text-[12px] outline-none transition-colors duration-150 placeholder:text-faint focus:border-accent-line"
+            className="w-full rounded-xs border border-line bg-surface-2 py-1 pe-14 ps-6 text-[12px] outline-hidden transition-colors duration-150 placeholder:text-faint focus:border-accent-line"
           />
 
           {query ? (
@@ -237,14 +237,14 @@ export function OperationsPane() {
               onClick={() => setQuery('')}
               aria-label={t.operations.clear}
               title={t.operations.clear}
-              className="absolute inset-y-0 end-1 my-auto grid h-5 w-5 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text"
+              className="absolute inset-y-0 inset-e-1 my-auto grid h-5 w-5 place-items-center rounded-xs text-faint transition-colors hover:bg-surface-3 hover:text-text"
             >
               <X size={12} aria-hidden="true" />
             </button>
           ) : (
             <kbd
               aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 end-1.5 my-auto flex h-[16px] items-center rounded-sm border border-line px-1 font-mono text-[10px] text-faint"
+              className="pointer-events-none absolute inset-y-0 inset-e-1.5 my-auto flex h-[16px] items-center rounded-xs border border-line px-1 font-mono text-[10px] text-faint"
             >
               {t.operations.shortcut}
             </kbd>

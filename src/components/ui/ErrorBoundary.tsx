@@ -30,7 +30,7 @@ export class ErrorBoundary extends Component<Props, State> {
         <div className="max-w-md">
           <h1 className="text-section font-semibold">{t.error.boundary}</h1>
           <p className="mt-2 text-muted">{t.error.boundaryDetail}</p>
-          <p className="mt-4 break-words font-mono text-micro text-faint">{error.message}</p>
+          <p className="mt-4 wrap-break-word font-mono text-micro text-faint">{error.message}</p>
           <Button className="mt-6" onClick={() => window.location.reload()}>
             {t.error.reload}
           </Button>

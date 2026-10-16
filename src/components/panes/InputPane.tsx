@@ -79,7 +79,7 @@ export function InputPane() {
           autoCapitalize="off"
           aria-label={t.input.title}
           placeholder={t.input.placeholder}
-          className="min-h-0 w-full flex-1 resize-none bg-transparent p-3 font-mono text-[0.875rem] leading-[1.75] outline-none placeholder:text-faint"
+          className="min-h-0 w-full flex-1 resize-none bg-transparent p-3 font-mono text-[0.875rem] leading-[1.75] outline-hidden placeholder:text-faint"
         />
 
         {dragging && (
@@ -103,7 +103,7 @@ export function InputPane() {
             onChange={(e) => setInputEncoding(e.target.value)}
             className={cx(
               'max-w-[16rem] rounded-control border border-line bg-surface-2 px-2 py-0.5',
-              'font-mono text-micro text-muted outline-none',
+              'font-mono text-micro text-muted outline-hidden',
               'focus-visible:border-accent-line',
             )}
           >

@@ -8,7 +8,7 @@ interface Props {
 
 const fieldClass =
   'w-full rounded-control border border-line bg-surface-2 px-2.5 py-1.5 font-mono text-micro ' +
-  'text-text outline-none transition-colors duration-150 ease-smooth focus:border-accent-line';
+  'text-text outline-hidden transition-colors duration-150 ease-smooth focus:border-accent-line';
 
 export function ArgControl({ stepUid, arg, onChange }: Props) {
   const id = `${stepUid}-${arg.name.replace(/\W+/g, '-')}`;
@@ -21,7 +21,7 @@ export function ArgControl({ stepUid, arg, onChange }: Props) {
           type="checkbox"
           checked={Boolean(arg.value)}
           onChange={(e) => onChange({ value: e.target.checked })}
-          className="h-3.5 w-3.5 accent-[var(--accent)]"
+          className="h-3.5 w-3.5 accent-(--accent)"
         />
         {arg.name}
       </label>
@@ -91,7 +91,7 @@ export function ArgControl({ stepUid, arg, onChange }: Props) {
             aria-label={`${arg.name} format`}
             value={arg.toggleValue ?? arg.toggleValues?.[0] ?? ''}
             onChange={(e) => onChange({ toggleValue: e.target.value })}
-            className="rounded-s-control border border-e-0 border-line bg-surface-3 px-2 py-1.5 font-mono text-micro text-muted outline-none"
+            className="rounded-s-control border border-e-0 border-line bg-surface-3 px-2 py-1.5 font-mono text-micro text-muted outline-hidden"
           >
             {(arg.toggleValues ?? []).map((option) => (
               <option key={option} value={option}>

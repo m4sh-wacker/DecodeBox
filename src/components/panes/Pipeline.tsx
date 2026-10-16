@@ -148,7 +148,7 @@ function Block({
               removeStep(step.uid);
             }
           }}
-          className="grid h-6 w-5 shrink-0 cursor-grab touch-none place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-muted active:cursor-grabbing"
+          className="grid h-6 w-5 shrink-0 cursor-grab touch-none place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-muted active:cursor-grabbing"
         >
           <GripVertical size={12} aria-hidden="true" />
         </button>
@@ -160,7 +160,7 @@ function Block({
           aria-label={hasBreak ? t.recipe.clearBreakpoint : t.recipe.setBreakpoint}
           aria-pressed={hasBreak}
           title={hasBreak ? t.recipe.clearBreakpoint : t.recipe.setBreakpoint}
-          className="grid h-6 w-5 shrink-0 place-items-center rounded"
+          className="grid h-6 w-5 shrink-0 place-items-center rounded-sm"
         >
           <Circle
             size={8}
@@ -184,7 +184,7 @@ function Block({
           onClick={() => setOpen((o) => !o)}
           aria-expanded={open}
           title={op?.description}
-          className="flex min-w-0 flex-1 items-center gap-1 rounded px-1 py-0.5 text-start"
+          className="flex min-w-0 flex-1 items-center gap-1 rounded-sm px-1 py-0.5 text-start"
         >
           <span
             className={cx(
@@ -212,7 +212,7 @@ function Block({
           onClick={() => toggleStep(step.uid)}
           aria-label={step.disabled ? t.recipe.enable : t.recipe.disable}
           title={step.disabled ? t.recipe.enable : t.recipe.disable}
-          className="grid h-6 w-6 shrink-0 place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-text"
+          className="grid h-6 w-6 shrink-0 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text"
         >
           {step.disabled ? (
             <EyeOff size={12} aria-hidden="true" />
@@ -227,7 +227,7 @@ function Block({
           onClick={() => removeStep(step.uid)}
           aria-label={t.recipe.remove}
           title={t.recipe.remove}
-          className="grid h-6 w-6 shrink-0 place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-danger"
+          className="grid h-6 w-6 shrink-0 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-danger"
         >
           <X size={12} aria-hidden="true" />
         </button>
@@ -466,7 +466,7 @@ export function Pipeline() {
             disabled={!paused}
             aria-label={t.recipe.step}
             title={t.recipe.step}
-            className="grid h-6 w-6 place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-text disabled:opacity-30"
+            className="grid h-6 w-6 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text disabled:opacity-30"
           >
             <SkipForward size={12} aria-hidden="true" />
           </button>
@@ -476,7 +476,7 @@ export function Pipeline() {
             disabled={empty}
             aria-label={t.recipe.rewrap}
             title={t.recipe.rewrapHint}
-            className="grid h-6 w-6 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-text disabled:opacity-30"
+            className="grid h-6 w-6 place-items-center rounded-xs text-faint transition-colors hover:bg-surface-3 hover:text-text disabled:opacity-30"
           >
             <Undo2 size={12} aria-hidden="true" />
           </button>
@@ -486,7 +486,7 @@ export function Pipeline() {
             disabled={empty}
             aria-label={t.recipe.clear}
             title={t.recipe.clear}
-            className="grid h-6 w-6 place-items-center rounded text-faint transition-colors hover:bg-surface-3 hover:text-danger disabled:opacity-30"
+            className="grid h-6 w-6 place-items-center rounded-sm text-faint transition-colors hover:bg-surface-3 hover:text-danger disabled:opacity-30"
           >
             <Trash2 size={12} aria-hidden="true" />
           </button>
@@ -517,7 +517,7 @@ export function Pipeline() {
               onClick={dismissRewrapBlockers}
               aria-label={t.recipe.dismiss}
               title={t.recipe.dismiss}
-              className="grid h-5 w-5 shrink-0 place-items-center rounded-sm text-faint hover:bg-surface-3 hover:text-text"
+              className="grid h-5 w-5 shrink-0 place-items-center rounded-xs text-faint hover:bg-surface-3 hover:text-text"
             >
               <X size={11} aria-hidden="true" />
             </button>
@@ -602,7 +602,7 @@ export function Pipeline() {
             type="checkbox"
             checked={autoBake}
             onChange={(e) => setAutoBake(e.target.checked)}
-            className="h-3 w-3 accent-[var(--accent)]"
+            className="h-3 w-3 accent-(--accent)"
           />
           {autoBake ? t.recipe.autoBaking : t.recipe.autoBake}
         </label>

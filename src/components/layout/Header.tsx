@@ -1,4 +1,5 @@
-import { Download, Github, Keyboard, Moon, Search, Sun } from 'lucide-react';
+import { Download, Keyboard, Moon, Search, Sun } from 'lucide-react';
+import { GithubMark } from '../ui/GithubMark';
 import { OwaspMark } from '../ui/OwaspMark';
 import { useStore } from '../../store/useStore';
 import { t } from '../../i18n/en';
@@ -18,7 +19,7 @@ function TitleButton({
   children: React.ReactNode;
 }) {
   const className =
-    'inline-grid h-[26px] w-[26px] place-items-center rounded-sm text-muted transition-colors duration-100 hover:bg-surface-3 hover:text-text';
+    'inline-grid h-[26px] w-[26px] place-items-center rounded-xs text-muted transition-colors duration-100 hover:bg-surface-3 hover:text-text';
 
   if (href) {
     return (
@@ -75,7 +76,7 @@ export function Header() {
         <span className="truncate">
           {steps.length === 0 ? t.header.commandEmpty : t.header.commandSteps(steps.length)}
         </span>
-        <kbd className="ms-1 rounded-sm border border-line px-1 font-mono text-[10px] leading-[14px]">
+        <kbd className="ms-1 rounded-xs border border-line px-1 font-mono text-[10px] leading-[14px]">
           {t.operations.shortcut}
         </kbd>
       </button>
@@ -94,7 +95,7 @@ export function Header() {
           <Keyboard size={14} aria-hidden="true" />
         </TitleButton>
         <TitleButton label={t.header.github} href="https://github.com/OWASP/DecodeBox">
-          <Github size={14} aria-hidden="true" />
+          <GithubMark size={14} aria-hidden="true" />
         </TitleButton>
       </div>
     </header>
