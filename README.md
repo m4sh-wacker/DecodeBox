@@ -183,7 +183,7 @@ it**. Contributions are welcome, particularly in these areas:
 - **Accessibility:** The WCAG 2.1 AA audit has not been done yet.
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md). All participants are expected to follow the
-[OWASP Code of Conduct](https://owasp.org/www-policy/operational/code-of-conduct).
+[OWASP Code of Conduct](https://policy.owasp.org/operational/code-of-conduct).
 
 ### Project Leader
 

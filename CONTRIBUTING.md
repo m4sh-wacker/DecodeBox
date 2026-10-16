@@ -8,7 +8,7 @@ anything to help: pasting real payloads at the live site and reporting what it g
 of the most useful contributions there is.
 
 By participating you agree to the
-[OWASP Code of Conduct](https://owasp.org/www-policy/operational/code-of-conduct).
+[OWASP Code of Conduct](https://policy.owasp.org/operational/code-of-conduct).
 
 ## Getting set up
 

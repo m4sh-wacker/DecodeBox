@@ -1,7 +1,7 @@
 # Code of Conduct
 
 OWASP DecodeBox is an OWASP Foundation project and follows the
-**[OWASP Code of Conduct](https://owasp.org/www-policy/operational/code-of-conduct)**.
+**[OWASP Code of Conduct](https://policy.owasp.org/operational/code-of-conduct)**.
 
 In short: everyone participating in this project — in issues, pull requests, discussions, and any
 project space — is expected to be respectful, constructive, and professional. Harassment,
